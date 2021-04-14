@@ -37,9 +37,14 @@ div {
 /* webchat div */
 
 .webchat {
-    width: 50rem;
-    height: 50rem;
-    background-color: red;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    color: blue;
+    font-size: 8rem;
+    padding-top: 200px;
+    z-index: -10;
+    display: grid;
 }
 
 /* background image */
