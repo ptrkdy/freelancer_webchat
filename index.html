@@ -323,17 +323,30 @@
 
     <!-- <script>!function(){let e=document.createElement("script"),t=document.head||document.getElementsByTagName("head")[0];e.src="https://storage.googleapis.com/cdn.botfront.cloud/botfront-widget-latest.js",e.async=!0,e.onload=(()=>{window.WebChat.default({customData:{"language":"en"},socketUrl:"https://sockets.insurancai.com"}, null)}),t.insertBefore(e,t.firstChild)}();</script> -->
 
-    <script src="index.js">
-          WebChat.default.init({
-                selector: "#webchat",
-                initPayload: "/get_started",
-                customData: { "language": "en" }, // arbitrary custom data. Stay minimal as this will be added to the socket
-                socketUrl: "https://sockets.insurancai.com",
-                socketPath: "/socket.io/",
-                title: "Title",
-                subtitle: "Subtitle",
-                params: { "storage": "session" } // can be set to "local"  or "session". details in storage section.
-            })
+    <script >
+        !(function () {
+            let e = document.createElement("script"),
+                t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+                "index.js"),
+                (e.async = !0),
+                (e.onload = () => {
+                window.WebChat.default(
+                    {
+                        selector: "#webchat",
+                            initPayload: "/get_started",
+                            customData: { "language": "en" }, // arbitrary custom data. Stay minimal as this will be added to the socket
+                            socketUrl: "https://sockets.insurancai.com",
+                            socketPath: "/socket.io/",
+                            title: "Title",
+                            subtitle: "Subtitle",
+                            params: { "storage": "session" } // can be set to "local"  or "session". details in storage section.
+                    },
+                    null
+                );
+                }),
+                t.insertBefore(e, t.firstChild);
+            })();
     </script>
 
 <!--     <script>!(function () {
