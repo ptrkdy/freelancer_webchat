@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- http://127.0.0.1:5500/projects/twitter_clone/main_page/001_project_overview/news_feed.html -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="webstyle.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="https://kit.fontawesome.com/7fcef2ffd5.js" crossorigin="anonymous"></script>
+    <title>Policy Builder</title>
+</head>
+
+<body>
+    <div class="bg">
+        <!-- login page -->
+        <section class="login-page">
+            <nav class="login-page-nav">
+                <ul>
+                    <li class="brand"><a href="#"><i class="fas fa-dove"></i>Home</a></li>
+                    <li><a href="#"></a>About</li>
+                    <li><a href="#"></a>Language: English</li>
+                </ul>
+            </nav>
+
+            <!-- end of login page -->
+
+            <!-- login -->
+            <div class="login">
+                <div class="login-content">
+                    <h2>Login to Insurancai</h2>
+                    <form class="login-form">
+                        <input type="text" placeholder="Phone, email, or username" />
+                        <input type="password" placeholder="password" />
+                        <div>
+                            <button type="button" class="login-form-btn">Log in</button>
+                            <input type="checkbox" class="login-form-checkbox" id="check" />
+                            <label for="check">Remember me</label>
+                            <a href="#">Forgot password?</a>
+
+                        </div>
+
+                    </form>
+                </div>
+                <footer class="login-footer">
+                    <p>New to Insurancai? <a href="#">Sign up now</a></p>
+                    <p>Already using Insurancai via text message? <a href="#">Activate your account</a></p>
+                </footer>
+            </div>
+
+        </section>
+        <!-- end of login -->
+
+
+
+        <!-- feed page -->
+
+        <section class="feeds-page">
+            <!-- feeds nav -->
+            <nav class="feeds-nav">
+                <div class="icons">
+                    <a href="#" class="active"><i class="fas fa-home"></i></a>
+                    <a href="#"><i class="fas fa-hashtag"></i></a>
+                    <a href="#"><i class="fas fa-bell"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                </div>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search Insurancai" class="search-bar-input">
+
+                </div>
+                <div class="user">
+                    <div class="user-img-wrapper">
+                        <!-- <img src="images/user1.jpg"> -->
+                        <i class="fa fa-info-circle fa-2x"></i>
+                    </div>
+                    <a href="#" class="user-link">Ai Assistant</a>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </nav>
+
+            <div class="left-hand-side">
+                <div class="boids">
+                    <main></main>
+                </div>
+                <div class="wrapper-left">
+                    <div class="card react">
+                        <div class="circle">
+                            <div class="bar"></div>
+                            <div class="box"><span></span></div>
+                        </div>
+                        <div class="text">Application Progress</div>
+                        <button onclick="sexualSlideLeft()">Hide Form</button>
+                        <button onclick="sexualSlideRight()">Show Form</button>
+                    </div>
+                </div>
+                
+                
+                <!-- form section -->
+                <div class="webform" id="webform">
+                    <section class='personal_info'>
+                        <!-- end of selection field -->
+                        <!--  -->
+                        <form class="policy_form">
+                            <div class="form_header" onclick="sexualSlideLeft()">
+                                <h3>Insurance Application</h3>
+                            </div>
+                            <!-- <i class="fas fa-cog fa-2x fa-spin"></i> -->
+                            <div class="form_section_icons">
+                                <i class="fa fa-car fa-2x"></i>
+                                <i class="fa fa-ship fa-2x"></i>
+                                <i class="fa fa-shield fa-2x"></i>
+                                <i class="fa fa-venus-mars fa-2x"></i>
+                            </div>
+                            <div class="form_section">
+                                <!-- <iframe src="https://share.descript.com/embed/Bah5D9KwEAs" width="640" height="360" frameborder="0"
+                                    allowfullscreen></iframe> -->
+                                <h1>Section I:</h1>
+                                <h1>Basic Information</h1>
+                                <br />
+                                <p>In this part of the insurance application, we collect general personal information, this will be needed later.</p>
+                                <br />
+                                <p>You can also interact with our AI chatbot on the right hand side of this webform - it is fully capable of guiding you through the entire application process. You can hide the webform, using the interface controls on the left.</p>
+                            </div>
+                            <div class="form_row">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <label for="fname">fname</label><br />
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
+                                    inventore
+                                    earum.</p>
+                                <input type="text" id="fname" name="fname" /><br />
+                            </div>
+                            <div class="form_row">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <label for="lname">lname</label><br />
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
+                                    inventore
+                                    earum.</p>
+                                <input type="text" id="lname" name="lname" /><br />
+                            </div>
+                            <div class="form_row">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <label for="email">email</label><br />
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
+                                    inventore
+                                    earum.</p>
+                                <input type="text" id="email" name="email" /><br />
+                            </div>
+                            <div class="form_row">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <label for="pbaddress">pbaddress</label><br />
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
+                                    inventore
+                                    earum.</p>
+                                <input type="text" id="pbaddress" name="pbaddress" /><br />
+                            </div>
+                            <div class="form_row">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <label for="pbstate">pbstate</label><br />
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
+                                    inventore
+                                    earum.</p>
+                                <input type="text" id="pbstate" name="pbstate" /><br />
+                            </div>
+                            <div class="form_row">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <label for="pbcity">pbcity</label><br />
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
+                                    inventore
+                                    earum.</p>
+                                <input type="text" id="pbcity" name="pbcity" /><br />
+                            </div>
+                            <div class="form_row">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <label for="pbzip">pbzip</label><br />
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
+                                    inventore
+                                    earum.</p>
+                                <input type="text" id="pbzip" name="pbzip" /><br />
+                            </div>
+                            <!-- submit button hidden until form behavior resolved (expand chat) -->
+                            <!-- <div class="form_row">
+                                        <input type="submit" value="Submit" />
+                                    </div> -->
+                            <!-- <input type="submit" value="Submit" /> -->
+                            <!-- Section II -->
+                            <div class="form_section">
+                                <h1>Section II:</h1>
+                                <h1>Business Information</h1>
+                                <br />
+                                <p>In this part of the insurance application, we collect general personal information, this will be needed later.
+                                </p>
+                                <br />
+                                <p>You can also interact with our AI chatbot on the right hand side of this webform - it is fully capable of guiding
+                                    you through the entire application process. You can hide the webform, using the interface controls on the left.
+                                </p>
+                            </div>
+                            <div class="form_row">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <label for="fname">fname</label><br />
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
+                                    inventore
+                                    earum.</p>
+                                <input type="text" id="fname" name="fname" /><br />
+                            </div>
+                            <div class="form_row">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <label for="lname">lname</label><br />
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
+                                    inventore
+                                    earum.</p>
+                                <input type="text" id="lname" name="lname" /><br />
+                            </div>
+                            <div class="form_row">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <label for="email">email</label><br />
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
+                                    inventore
+                                    earum.</p>
+                                <input type="text" id="email" name="email" /><br />
+                            </div>
+                            <div class="form_row">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <label for="pbaddress">pbaddress</label><br />
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
+                                    inventore
+                                    earum.</p>
+                                <input type="text" id="pbaddress" name="pbaddress" /><br />
+                            </div>
+                            <div class="form_row">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <label for="pbstate">pbstate</label><br />
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
+                                    inventore
+                                    earum.</p>
+                                <input type="text" id="pbstate" name="pbstate" /><br />
+                            </div>
+                            <div class="form_row">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <label for="pbcity">pbcity</label><br />
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
+                                    inventore
+                                    earum.</p>
+                                <input type="text" id="pbcity" name="pbcity" /><br />
+                            </div>
+                            <div class="form_row">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <label for="pbzip">pbzip</label><br />
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
+                                    inventore
+                                    earum.</p>
+                                <input type="text" id="pbzip" name="pbzip" /><br />
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <!-- end of form section -->
+
+                
+
+            </div>
+
+            <div class="right-hand-side" id="right-hand-side">
+
+                <div class="follow">
+                    <!-- <h3 class="follow-heading">Who to follow</h3> -->
+                    <div class="container">
+                        <div class="chat-container" id="chat-container">
+                            <i class="fas fa-feather-alt"></i>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="follow-controls">
+                            <!-- <div><p>These options will help you navigate the assistant</p></div> -->
+                            <button type="button" class="follow-btn-grad" onclick="controlFaq()">Start</button>
+                            <button type="button" class="follow-btn-grad" onclick="controlTwo()">Menu</button>
+                            <button type="button" class="follow-btn-grad" onclick="controlThree()">Continue</button>
+                        </div>
+                        <div class="follow-user">
+                            <div class="follow-user-img">
+                                <!-- <i class="fas fa-cog fa-2x"></i> -->
+                                <!-- <i class="fa fa-info-circle fa-2x"></i> -->
+                                <i class="fa fa-dot-circle-o fa-2x"></i>
+                                <!-- <div class="inner_"></div> -->
+                
+                                <!-- <img src="images/ai_profile_jpg.jpg" /> -->
+                            </div>
+                            <div class="follow-user-info">
+                                <h4>Ai assistant</h4>
+                                <p>@aiassistant</p>
+                            </div>
+                            <button type="button" class="follow-btn" onclick="myFunction()">Chat Now</button>
+                        </div>
+                
+                        <footer class="follow-footer">
+                            <ul>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="#">Cookies</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">More</a></li>
+                            </ul>
+                        </footer>
+                    </div>
+                </div>
+
+                <div class="wrapper-right">
+
+                    
+
+                </div>
+            </div>
+
+    </div>
+
+    </section>
+
+    </div>
+
+    <div id="webchat"></div>
+    <!-- end of feed page -->
+
+    <!-- script for botfront -->
+
+    <!-- <script crossorigin="strict-origin-when-cross-origin">!function () { let e = document.createElement("script"), t = document.head || document.getElementsByTagName("head")[0]; e.src = "https://storage.googleapis.com/cdn.botfront.cloud/botfront-widget-latest.js", e.async = !0, e.onload = (() => { window.WebChat.default({ customData: { "language": "en" }, socketUrl: "https://sockets.insurancai.com" }, null) }), t.insertBefore(e, t.firstChild) }();</script> -->
+
+    <!-- <script>!function () { let e = document.createElement("script"), t = document.head || document.getElementsByTagName("head")[0]; e.src = "https://storage.googleapis.com/cdn.botfront.cloud/botfront-widget-latest.js", e.async = !0, e.onload = (() => { window.WebChat.default({ customData: undefined, socketUrl: "https://sockets.insurancai.com" }, null) }), t.insertBefore(e, t.firstChild) }();</script> -->
+
+    <!-- <script>!(function () {
+            let e = document.createElement("script"),
+                t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+                "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.0/lib/index.js"),
+                (e.async = !0),
+                (e.onload = () => {
+                    window.WebChat.default(
+                        {
+                            customData: { language: "en" },
+                            socketUrl: "https://sockets.insurancai.com",
+                            // add other props here
+                        },
+                        null
+                    );
+                }),
+                t.insertBefore(e, t.firstChild);
+        })();
+    </script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/rasa-webchat@0.11.12/lib/index.min.js"></script>
+
+    <script>
+          WebChat.default.init({
+                selector: "#webchat",
+                initPayload: "/get_started",
+                customData: { "language": "en" }, // arbitrary custom data. Stay minimal as this will be added to the socket
+                socketUrl: "https://sockets.insurancai.com",
+                socketPath: "/socket.io/",
+                title: "Title",
+                subtitle: "Subtitle",
+                params: { "storage": "session" } // can be set to "local"  or "session". details in storage section.
+            })
+    </script>
+
+    <!-- end of script for botfront -->
+
+    <script
+        src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js" />
+    </script>
+    <script type="text/javascript">
+        const chatroom = window.Chatroom({
+            host: "https://chatbot.insurancai.com",
+            title: "Get Quote",
+            container: document.querySelector(".chat-container"),
+            welcomeMessage: "This is an AI machine learning assistant. It can handle most of the questions you have about this insurance product, and fill in the application for you! Try us out! How can we help you? To begin, say 'hello' or ask 'what can you do?'",
+            speechRecognition: "en-US"
+        });
+        // chatroom.openChat();
+        // const chatroom_head = document.querySelector(".chat-container h3");
+        // chatroom_head.click();
+        // demo messages
+        const chatroom_open = document.querySelector(".chat-container h3");
+        chatroom_open.click();
+        const chatroom_input = document.querySelector(".chat-container input");
+        chatroom_input.click();
+        chatroom_input.value = "Hey there! Can I see the FAQ?";
+        // chatroom_input.click();
+        const chatroom_submit = document.querySelector('input[value="Submit"]');
+        chatroom_submit.click();
+    </script>
+    
+    <script>
+        function myFunction() {
+                const click_chatroom_submit = document.querySelector('.chat-container h3');
+                click_chatroom_submit.click();
+                click_chatroom_submit.style.backgroundColor = "#a445b2";
+                const button_change_purp = document.querySelector('.follow-btn');
+                button_change_purp.style.backgroundColor ='#a445b2';
+                button_change_purp.style.borderColor = '#a445b2';
+            }
+        function controlFaq() {
+                const initial_chatroom_input = document.querySelector(".chat-container input");
+                initial_chatroom_input.click();
+                initial_chatroom_input.value = "advanced FAQ";
+                const initial_chatroom_submit = document.querySelector('.chat-container input[value="Submit"]');
+                initial_chatroom_submit.click();
+                initial_chatroom_input.click();
+            }
+        function controlTwo() {
+                const initial_chatroom_input = document.querySelector(".chat-container input");
+                initial_chatroom_input.click();
+                initial_chatroom_input.value = "/apply";
+                const initial_chatroom_submit = document.querySelector('.chat-container input[value="Submit"]');
+                initial_chatroom_submit.click();
+                initial_chatroom_input.click();
+            }
+        function controlThree() {
+                const initial_chatroom_input = document.querySelector(".chat-container input");
+                initial_chatroom_input.click();
+                initial_chatroom_input.value = "next question";
+                const initial_chatroom_submit = document.querySelector('.chat-container input[value="Submit"]');
+                initial_chatroom_submit.click();
+                const reclick_initial_chatroom_input = document.querySelector(".chat-container input");
+                reclick_initial_chatroom_input.click();
+            }
+    </script>
+
+    <script>
+        let options = {
+            startAngle: -1.55,
+            size: 150,
+            value: 0.85,
+            fill: { gradient: ['#a445b2', '#1aa1f5'] }
+            // a445b2
+            // fa4299
+        }
+        $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+            function (event, progress, stepValue) {
+                $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+            });
+        $(".js .bar").circleProgress({
+            value: 0.70
+        });
+        $(".react .bar").circleProgress({
+            value: 0.60
+        });
+        function stepCircle(){
+             $(".react .bar").circleProgress({
+             value: 0.80
+            });
+        }
+        function sexualSlideLeft(){
+            $('#webform').hide("slide", { direction: "left" }, 1000);
+            $('#right-hand-side').animate({
+                'marginLeft': "-=750px"
+            });
+        }
+        function sexualSlideRight() {
+            $('#webform').show("slide", { direction: "left" }, 1000);
+            $('#right-hand-side').animate({
+                'marginLeft': "+=750px"
+            });
+        }
+    </script>
+
+    <!-- <script type="text/javascript" src="./script.js"></script> -->
+    <!-- <script type="text/javascript" src="./p5/p5.js"></script>
+    <script type="text/javascript" src="./boids.js"></script> -->
+
+    <!-- <script>
+        const can_back = document.querySelector('.p5Canvas defaultCanvas0');
+        can_back.style.backgroundColor="none";
+    </script> -->
+
+</body>
+
+</html>

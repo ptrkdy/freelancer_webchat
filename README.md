@@ -1,2 +1,2 @@
-# freelancer_webchat
-project to share with devs
+# chatroom_bootstrap
+basic front end website for chat
