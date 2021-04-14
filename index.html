@@ -270,7 +270,7 @@
 
             <div class="right-hand-side" id="right-hand-side">
 
-                <div class="webchat">Botfront Webchat</div>
+                <div id="webchat" class="webchat">Botfront Webchat</div>
 
                 
 
@@ -357,66 +357,8 @@
 
     <!-- end of script for botfront -->
 
-    <script
-        src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js" />
-    </script>
-    <script type="text/javascript">
-        const chatroom = window.Chatroom({
-            host: "https://chatbot.insurancai.com",
-            title: "Get Quote",
-            container: document.querySelector(".chat-container"),
-            welcomeMessage: "This is an AI machine learning assistant. It can handle most of the questions you have about this insurance product, and fill in the application for you! Try us out! How can we help you? To begin, say 'hello' or ask 'what can you do?'",
-            speechRecognition: "en-US"
-        });
-        // chatroom.openChat();
-        // const chatroom_head = document.querySelector(".chat-container h3");
-        // chatroom_head.click();
-        // demo messages
-        const chatroom_open = document.querySelector(".chat-container h3");
-        chatroom_open.click();
-        const chatroom_input = document.querySelector(".chat-container input");
-        chatroom_input.click();
-        chatroom_input.value = "Hey there! Can I see the FAQ?";
-        // chatroom_input.click();
-        const chatroom_submit = document.querySelector('input[value="Submit"]');
-        chatroom_submit.click();
-    </script>
     
-    <script>
-        function myFunction() {
-                const click_chatroom_submit = document.querySelector('.chat-container h3');
-                click_chatroom_submit.click();
-                click_chatroom_submit.style.backgroundColor = "#a445b2";
-                const button_change_purp = document.querySelector('.follow-btn');
-                button_change_purp.style.backgroundColor ='#a445b2';
-                button_change_purp.style.borderColor = '#a445b2';
-            }
-        function controlFaq() {
-                const initial_chatroom_input = document.querySelector(".chat-container input");
-                initial_chatroom_input.click();
-                initial_chatroom_input.value = "advanced FAQ";
-                const initial_chatroom_submit = document.querySelector('.chat-container input[value="Submit"]');
-                initial_chatroom_submit.click();
-                initial_chatroom_input.click();
-            }
-        function controlTwo() {
-                const initial_chatroom_input = document.querySelector(".chat-container input");
-                initial_chatroom_input.click();
-                initial_chatroom_input.value = "/apply";
-                const initial_chatroom_submit = document.querySelector('.chat-container input[value="Submit"]');
-                initial_chatroom_submit.click();
-                initial_chatroom_input.click();
-            }
-        function controlThree() {
-                const initial_chatroom_input = document.querySelector(".chat-container input");
-                initial_chatroom_input.click();
-                initial_chatroom_input.value = "next question";
-                const initial_chatroom_submit = document.querySelector('.chat-container input[value="Submit"]');
-                initial_chatroom_submit.click();
-                const reclick_initial_chatroom_input = document.querySelector(".chat-container input");
-                reclick_initial_chatroom_input.click();
-            }
-    </script>
+
 
     <script>
         let options = {
