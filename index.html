@@ -298,26 +298,13 @@
 
     <script>
         $(function() {
-            // console.log(moment().subtract(29, 'days').format('MM/DD/YYYY'), moment().format('MM/DD/YYYY'))
-            // $('#sdate').val(moment().subtract(29, 'days').format('YYYY-MM-DD'))
-            // $('#edate').val(moment().format('YYYY-MM-DD'))
-
-            $(".rw-new-message").val(moment().subtract(29, 'days').format('MM/DD/YYYY') + ' - ' + moment().format('MM/DD/YYYY'));
+            // $(".rw-new-message").val(moment().subtract(29, 'days').format('MM/DD/YYYY') + ' - ' + moment().format('MM/DD/YYYY'));
             $('#reservation').val(moment().subtract(29, 'days').format('MM/DD/YYYY') + ' - ' + moment().format('MM/DD/YYYY'))
         });
 
         $('#reservation').daterangepicker(null, function(start, end, label) {
-            // console.log(start.format('MM/DD/YYYY'), end.format('MM/DD/YYYY'), label);
-            // $('#sdate').val(start.format('YYYY-MM-DD'))
-            // $('#edate').val(end.format('YYYY-MM-DD'))
             $(".rw-new-message").val(moment().subtract(29, 'days').format('MM/DD/YYYY') + ' - ' + moment().format('MM/DD/YYYY'));
         });
-
-        function putDate(obj) {
-
-            console.log(obj.value);
-            $(".rw-new-message").val(obj.value);
-        }
 
         !(function() {
             let e = document.createElement("script"),
