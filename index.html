@@ -10,12 +10,13 @@
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" /> -->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="webstyle.css" />
+    <link rel="stylesheet" href="chatbot.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="https://kit.fontawesome.com/7fcef2ffd5.js" crossorigin="anonymous"></script>
     <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
     <title>Policy Builder</title>
 </head>
 
@@ -26,8 +27,10 @@
             <nav class="login-page-nav">
                 <ul>
                     <li class="brand"><a href="#"><i class="fas fa-dove"></i>Home</a></li>
-                    <li><a href="#"></a>About</li>
-                    <li><a href="#"></a>Language: English</li>
+                    <li>
+                        <a href="#"></a>About</li>
+                    <li>
+                        <a href="#"></a>Language: English</li>
                 </ul>
             </nav>
 
@@ -102,10 +105,19 @@
                         <button onclick="sexualSlideRight()">Show Form</button>
                     </div>
                 </div>
-                
-                
+
+
                 <!-- form section -->
                 <div class="webform" id="webform">
+
+                    <div class="input-prepend input-group rw-hide-sm">
+                        <input type="text" name="reservation" id="reservation" class="form-control" value="" />
+                        <div class="input-group-append" data-target="#reservation" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                        </div>
+                    </div>
+
+
                     <section class='personal_info'>
                         <!-- end of selection field -->
                         <!--  -->
@@ -128,62 +140,57 @@
                                 <br />
                                 <p>In this part of the insurance application, we collect general personal information, this will be needed later.</p>
                                 <br />
-                                <p>You can also interact with our AI chatbot on the right hand side of this webform - it is fully capable of guiding you through the entire application process. You can hide the webform, using the interface controls on the left.</p>
+                                <p>You can also interact with our AI chatbot on the right hand side of this webform - it is fully capable of guiding you through the entire application process. You can hide the webform, using the interface controls on the
+                                    left.
+                                </p>
                             </div>
                             <div class="form_row">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 <label for="fname">fname</label><br />
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
-                                    inventore
-                                    earum.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod inventore earum.
+                                </p>
                                 <input type="text" id="fname" name="fname" /><br />
                             </div>
                             <div class="form_row">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 <label for="lname">lname</label><br />
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
-                                    inventore
-                                    earum.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod inventore earum.
+                                </p>
                                 <input type="text" id="lname" name="lname" /><br />
                             </div>
                             <div class="form_row">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 <label for="email">email</label><br />
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
-                                    inventore
-                                    earum.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod inventore earum.
+                                </p>
                                 <input type="text" id="email" name="email" /><br />
                             </div>
                             <div class="form_row">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 <label for="pbaddress">pbaddress</label><br />
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
-                                    inventore
-                                    earum.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod inventore earum.
+                                </p>
                                 <input type="text" id="pbaddress" name="pbaddress" /><br />
                             </div>
                             <div class="form_row">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 <label for="pbstate">pbstate</label><br />
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
-                                    inventore
-                                    earum.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod inventore earum.
+                                </p>
                                 <input type="text" id="pbstate" name="pbstate" /><br />
                             </div>
                             <div class="form_row">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 <label for="pbcity">pbcity</label><br />
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
-                                    inventore
-                                    earum.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod inventore earum.
+                                </p>
                                 <input type="text" id="pbcity" name="pbcity" /><br />
                             </div>
                             <div class="form_row">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 <label for="pbzip">pbzip</label><br />
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
-                                    inventore
-                                    earum.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod inventore earum.
+                                </p>
                                 <input type="text" id="pbzip" name="pbzip" /><br />
                             </div>
                             <!-- submit button hidden until form behavior resolved (expand chat) -->
@@ -199,64 +206,57 @@
                                 <p>In this part of the insurance application, we collect general personal information, this will be needed later.
                                 </p>
                                 <br />
-                                <p>You can also interact with our AI chatbot on the right hand side of this webform - it is fully capable of guiding
-                                    you through the entire application process. You can hide the webform, using the interface controls on the left.
+                                <p>You can also interact with our AI chatbot on the right hand side of this webform - it is fully capable of guiding you through the entire application process. You can hide the webform, using the interface controls on the
+                                    left.
                                 </p>
                             </div>
                             <div class="form_row">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 <label for="fname">fname</label><br />
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
-                                    inventore
-                                    earum.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod inventore earum.
+                                </p>
                                 <input type="text" id="fname" name="fname" /><br />
                             </div>
                             <div class="form_row">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 <label for="lname">lname</label><br />
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
-                                    inventore
-                                    earum.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod inventore earum.
+                                </p>
                                 <input type="text" id="lname" name="lname" /><br />
                             </div>
                             <div class="form_row">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 <label for="email">email</label><br />
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
-                                    inventore
-                                    earum.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod inventore earum.
+                                </p>
                                 <input type="text" id="email" name="email" /><br />
                             </div>
                             <div class="form_row">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 <label for="pbaddress">pbaddress</label><br />
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
-                                    inventore
-                                    earum.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod inventore earum.
+                                </p>
                                 <input type="text" id="pbaddress" name="pbaddress" /><br />
                             </div>
                             <div class="form_row">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 <label for="pbstate">pbstate</label><br />
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
-                                    inventore
-                                    earum.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod inventore earum.
+                                </p>
                                 <input type="text" id="pbstate" name="pbstate" /><br />
                             </div>
                             <div class="form_row">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 <label for="pbcity">pbcity</label><br />
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
-                                    inventore
-                                    earum.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod inventore earum.
+                                </p>
                                 <input type="text" id="pbcity" name="pbcity" /><br />
                             </div>
                             <div class="form_row">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 <label for="pbzip">pbzip</label><br />
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod
-                                    inventore
-                                    earum.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium debitis rerum voluptatum, quod inventore earum.
+                                </p>
                                 <input type="text" id="pbzip" name="pbzip" /><br />
                             </div>
                         </form>
@@ -264,7 +264,7 @@
                 </div>
                 <!-- end of form section -->
 
-                
+
 
             </div>
 
@@ -272,11 +272,11 @@
 
                 <!-- <div id="webchat" class="webchat">Botfront Webchat</div> -->
 
-                
+
 
                 <div class="wrapper-right">
 
-                                
+
 
                 </div>
             </div>
@@ -287,103 +287,79 @@
 
     </div>
 
-    <!-- start of webchat test -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
 
-    
-    <!-- end of feed page -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 
-    <!-- script for botfront -->
 
-    <!-- <script crossorigin="strict-origin-when-cross-origin">!function () { let e = document.createElement("script"), t = document.head || document.getElementsByTagName("head")[0]; e.src = "https://storage.googleapis.com/cdn.botfront.cloud/botfront-widget-latest.js", e.async = !0, e.onload = (() => { window.WebChat.default({ customData: { "language": "en" }, socketUrl: "https://sockets.insurancai.com" }, null) }), t.insertBefore(e, t.firstChild) }();</script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.css" integrity="sha512-gp+RQIipEa1X7Sq1vYXnuOW96C4704yI1n0YB9T/KqdvqaEgL6nAuTSrKufUX3VBONq/TPuKiXGLVgBKicZ0KA==" crossorigin="anonymous"
+    />
 
-    <!-- <script>!function () { let e = document.createElement("script"), t = document.head || document.getElementsByTagName("head")[0]; e.src = "https://storage.googleapis.com/cdn.botfront.cloud/botfront-widget-latest.js", e.async = !0, e.onload = (() => { window.WebChat.default({ customData: undefined, socketUrl: "https://sockets.insurancai.com" }, null) }), t.insertBefore(e, t.firstChild) }();</script> -->
+    <script>
+        $(function() {
+            // console.log(moment().subtract(29, 'days').format('MM/DD/YYYY'), moment().format('MM/DD/YYYY'))
+            // $('#sdate').val(moment().subtract(29, 'days').format('YYYY-MM-DD'))
+            // $('#edate').val(moment().format('YYYY-MM-DD'))
 
-    <!-- <script>!(function () {
-            let e = document.createElement("script"),
-                t = document.head || document.getElementsByTagName("head")[0];
-            (e.src =
-                "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.0/lib/index.js"),
-                (e.async = !0),
-                (e.onload = () => {
-                    window.WebChat.default(
-                        {
-                            customData: { language: "en" },
-                            socketUrl: "https://sockets.insurancai.com",
-                            // add other props here
-                        },
-                        null
-                    );
-                }),
-                t.insertBefore(e, t.firstChild);
-        })();
-    </script> -->
+            $(".rw-new-message").val(moment().subtract(29, 'days').format('MM/DD/YYYY') + ' - ' + moment().format('MM/DD/YYYY'));
+            $('#reservation').val(moment().subtract(29, 'days').format('MM/DD/YYYY') + ' - ' + moment().format('MM/DD/YYYY'))
+        });
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/rasa-webchat@1.0/lib/index.min.js"></script> -->
-    <!-- <script src="index.js"></script> -->
+        $('#reservation').daterangepicker(null, function(start, end, label) {
+            // console.log(start.format('MM/DD/YYYY'), end.format('MM/DD/YYYY'), label);
+            // $('#sdate').val(start.format('YYYY-MM-DD'))
+            // $('#edate').val(end.format('YYYY-MM-DD'))
+            $(".rw-new-message").val(moment().subtract(29, 'days').format('MM/DD/YYYY') + ' - ' + moment().format('MM/DD/YYYY'));
+        });
 
-    <!-- <script>!function(){let e=document.createElement("script"),t=document.head||document.getElementsByTagName("head")[0];e.src="https://storage.googleapis.com/cdn.botfront.cloud/botfront-widget-latest.js",e.async=!0,e.onload=(()=>{window.WebChat.default({customData:{"language":"en"},socketUrl:"https://sockets.insurancai.com"}, null)}),t.insertBefore(e,t.firstChild)}();</script> -->
+        function putDate(obj) {
 
-    <script >
-        !(function () {
+            console.log(obj.value);
+            $(".rw-new-message").val(obj.value);
+        }
+
+        !(function() {
             let e = document.createElement("script"),
                 t = document.head || document.getElementsByTagName("head")[0];
             (e.src =
                 "index.js"),
-                (e.async = !0),
-                (e.onload = () => {
-                window.WebChat.default(
-                    {
+            (e.async = !0),
+            (e.onload = () => {
+                window.WebChat.default({
                         selector: "#webchat",
-                            initPayload: "/get_started",
-                            customData: { "language": "en" }, // arbitrary custom data. Stay minimal as this will be added to the socket
-                            socketUrl: "https://sockets.insurancai.com",
-                            socketPath: "/socket.io/",
-                            title: "Title",
-                            subtitle: "Subtitle",
-                            params: { "storage": "session" } // can be set to "local"  or "session". details in storage section.
+                        initPayload: "/get_started",
+                        customData: {
+                            "language": "en"
+                        }, // arbitrary custom data. Stay minimal as this will be added to the socket
+                        socketUrl: "https://sockets.insurancai.com",
+                        socketPath: "/socket.io/",
+                        title: "Title",
+                        subtitle: "Subtitle",
+                        params: {
+                            "storage": "session"
+                        } // can be set to "local"  or "session". details in storage section.
                     },
                     null
                 );
-                }),
-                t.insertBefore(e, t.firstChild);
-            })();
-    </script>
-
-<!--     <script>!(function () {
-        let e = document.createElement("script"),
-        t = document.head || document.getElementsByTagName("head")[0];
-        (e.src ="index.js"),
-        (e.async = !0),
-        (e.onload = () => {
-          window.WebChat.default(
-            {
-              customData: { language: "en" },
-              socketUrl: "https://sockets.insurancai.com",
-              // add other props here
-            },
-            null
-          );
-        }),
-        t.insertBefore(e, t.firstChild);
+            }),
+            t.insertBefore(e, t.firstChild);
         })();
-    </script> -->
-
-    <!-- end of script for botfront -->
-
-    
-
+    </script>
 
     <script>
         let options = {
             startAngle: -1.55,
             size: 150,
             value: 0.85,
-            fill: { gradient: ['#a445b2', '#1aa1f5'] }
+            fill: {
+                gradient: ['#a445b2', '#1aa1f5']
+            }
             // a445b2
             // fa4299
         }
         $(".circle .bar").circleProgress(options).on('circle-animation-progress',
-            function (event, progress, stepValue) {
+            function(event, progress, stepValue) {
                 $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
             });
         $(".js .bar").circleProgress({
@@ -392,33 +368,31 @@
         $(".react .bar").circleProgress({
             value: 0.60
         });
-        function stepCircle(){
-             $(".react .bar").circleProgress({
-             value: 0.80
+
+        function stepCircle() {
+            $(".react .bar").circleProgress({
+                value: 0.80
             });
         }
-        function sexualSlideLeft(){
-            $('#webform').hide("slide", { direction: "left" }, 1000);
+
+        function sexualSlideLeft() {
+            $('#webform').hide("slide", {
+                direction: "left"
+            }, 1000);
             $('#right-hand-side').animate({
                 'marginLeft': "-=750px"
             });
         }
+
         function sexualSlideRight() {
-            $('#webform').show("slide", { direction: "left" }, 1000);
+            $('#webform').show("slide", {
+                direction: "left"
+            }, 1000);
             $('#right-hand-side').animate({
                 'marginLeft': "+=750px"
             });
         }
     </script>
-
-    <!-- <script type="text/javascript" src="./script.js"></script> -->
-    <!-- <script type="text/javascript" src="./p5/p5.js"></script>
-    <script type="text/javascript" src="./boids.js"></script> -->
-
-    <!-- <script>
-        const can_back = document.querySelector('.p5Canvas defaultCanvas0');
-        can_back.style.backgroundColor="none";
-    </script> -->
 
 </body>
 
