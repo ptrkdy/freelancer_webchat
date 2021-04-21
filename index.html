@@ -306,13 +306,21 @@
     $('#reservation').hide();
 
     $(document).ready(function() {
-        // console.log($("#launcher").hasClass("rw-hide-sm"))
-        // if ($("#launcher").hasClass("rw-hide-sm")) {
-        //     $('#reservation').hide();
-        // } else {
-        //     $('#reservation').show();
-        // }
+        setTimeout(function() {
+            console.log($("#launcher").hasClass("rw-hide-sm"))
+            if ($("#launcher").length) {
+                if ($("#launcher").hasClass("rw-hide-sm")) {
+                    $('#reservation').show();
+                } else {
+                    $('#reservation').hide();
+                }
+            } else {
+                $('#reservation').hide();
+            }
+        }, 1000);
+
     });
+
 
     $(document).on("click", "#launcher", function() {
         console.log($("#launcher").hasClass("rw-hide-sm"))
