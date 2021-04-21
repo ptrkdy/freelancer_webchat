@@ -22,9 +22,14 @@
 
 <body>
 
-    <div class="datepicker-container">
-        <div name="reservation" id="reservation" class="datepicker-label">select date</div>
-        <div class="input-group-append" data-target="#reservation" data-toggle="datetimepicker">
+    <div class="datepicker-container" id="datepicker-container">
+        <div class="ditepicker-card">
+            <div class="input-group-append" data-target="#reservation" data-toggle="datetimepicker">
+                <button type="button" class="close" aria-label="Close" onclick="hideDatepicker()">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+            </div>
+            <div name="reservation" id="reservation" class="datepicker-label">select date</div>
         </div>
     </div>
     <div class="bg">
@@ -303,37 +308,42 @@
 
 <script>
     var isOpen = 0;
-    $('#reservation').hide();
+    $('#datepicker-container').hide();
 
     $(document).ready(function() {
         setTimeout(function() {
             console.log($("#launcher").hasClass("rw-hide-sm"))
             if ($("#launcher").length) {
                 if ($("#launcher").hasClass("rw-hide-sm")) {
-                    $('#reservation').show();
+                    $('#datepicker-container').show();
                 } else {
-                    $('#reservation').hide();
+                    $('#datepicker-container').hide();
                 }
             } else {
-                $('#reservation').hide();
+                $('#datepicker-container').hide();
             }
-        }, 1000);
-
+        }, 1500);
     });
-
 
     $(document).on("click", "#launcher", function() {
         console.log($("#launcher").hasClass("rw-hide-sm"))
         if ($("#launcher").hasClass("rw-hide-sm")) {
+            $('#datepicker-container').hide();
             $('#reservation').hide();
         } else {
+            $('#datepicker-container').show();
             $('#reservation').show();
         }
     });
 
+    function hideDatepicker() {
+        $('#datepicker-container').hide();
+    }
+
     $('#reservation').daterangepicker(null, function(start, end, label) {
         $(".rw-new-message").val(moment().subtract(29, 'days').format('MM/DD/YYYY') + ' - ' + moment().format('MM/DD/YYYY'));
         $('#reservation').hide();
+        $('#datepicker-container').hide();
     });
 
     !(function() {
