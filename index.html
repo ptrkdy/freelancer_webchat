@@ -311,15 +311,10 @@
 <script>
     // show/hide date-picker at loading screen
     $('#datepicker-container').hide();
-
-    // show/hide date-picker when click chatbot launcher button
-    $(document).on("click", "#launcher", function() {
-        // if ($("#launcher").hasClass("rw-hide-sm")) {
-        //     $('#datepicker-container').hide();
-        // } else {
-        //     $('#datepicker-container').show();
-        // }
+    $(function() {
+        $('#reservation').datetimepicker();
     });
+
 
     // hide date-picker
     function hideDatepicker() {
@@ -335,13 +330,13 @@
         console.log($("#dateForm"))
             // $("#dateForm").submit();
 
-        $('dateForm').submit(function(e) {
-            console.log('object here...')
-                // Stop the form submitting
-            e.preventDefault();
-            e.currentTarget.submit();
-            console.log('object here')
-        });
+        // $('dateForm').submit(function(e) {
+        //     console.log('object here...')
+        //         // Stop the form submitting
+        //     e.preventDefault();
+        //     e.currentTarget.submit();
+        //     console.log('object here')
+        // });
     });
 
     // process when click custom button1
