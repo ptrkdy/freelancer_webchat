@@ -307,12 +307,10 @@
 />
 
 <script>
-    var isOpen = 0;
+    // show/hide date-picker at loading screen
     $('#datepicker-container').hide();
-
     $(document).ready(function() {
         setTimeout(function() {
-            console.log($("#launcher").hasClass("rw-hide-sm"))
             if ($("#launcher").length) {
                 if ($("#launcher").hasClass("rw-hide-sm")) {
                     $('#datepicker-container').show();
@@ -325,25 +323,39 @@
         }, 1500);
     });
 
+    // show/hide date-picker when click chatbot launcher button
     $(document).on("click", "#launcher", function() {
-        console.log($("#launcher").hasClass("rw-hide-sm"))
         if ($("#launcher").hasClass("rw-hide-sm")) {
             $('#datepicker-container').hide();
-            $('#reservation').hide();
         } else {
             $('#datepicker-container').show();
-            $('#reservation').show();
         }
     });
 
+    // hide date-picker
     function hideDatepicker() {
         $('#datepicker-container').hide();
     }
 
+    // pick date-picker and set the value to the chatbot text
     $('#reservation').daterangepicker(null, function(start, end, label) {
         $(".rw-new-message").val(moment().subtract(29, 'days').format('MM/DD/YYYY') + ' - ' + moment().format('MM/DD/YYYY'));
-        $('#reservation').hide();
         $('#datepicker-container').hide();
+    });
+
+    // process when click custom button1
+    $(document).on("click", "#custom1", function() {
+        console.log('custom button1 is clicked')
+    });
+
+    // process when click custom button2
+    $(document).on("click", "#custom2", function() {
+        console.log('custom button2 is clicked')
+    });
+
+    // process when click custom button3
+    $(document).on("click", "#custom3", function() {
+        console.log('custom button3 is clicked')
     });
 
     !(function() {
