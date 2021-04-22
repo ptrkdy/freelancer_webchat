@@ -305,31 +305,20 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.css" integrity="sha512-gp+RQIipEa1X7Sq1vYXnuOW96C4704yI1n0YB9T/KqdvqaEgL6nAuTSrKufUX3VBONq/TPuKiXGLVgBKicZ0KA==" crossorigin="anonymous"
 />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
 
 <script>
     // show/hide date-picker at loading screen
     $('#datepicker-container').hide();
-    $(document).ready(function() {
-        setTimeout(function() {
-            if ($("#launcher").length) {
-                if ($("#launcher").hasClass("rw-hide-sm")) {
-                    $('#datepicker-container').show();
-                } else {
-                    $('#datepicker-container').hide();
-                }
-            } else {
-                $('#datepicker-container').hide();
-            }
-        }, 1500);
-    });
 
     // show/hide date-picker when click chatbot launcher button
     $(document).on("click", "#launcher", function() {
-        if ($("#launcher").hasClass("rw-hide-sm")) {
-            $('#datepicker-container').hide();
-        } else {
-            $('#datepicker-container').show();
-        }
+        // if ($("#launcher").hasClass("rw-hide-sm")) {
+        //     $('#datepicker-container').hide();
+        // } else {
+        //     $('#datepicker-container').show();
+        // }
     });
 
     // hide date-picker
@@ -341,6 +330,18 @@
     $('#reservation').daterangepicker(null, function(start, end, label) {
         $(".rw-new-message").val(moment().subtract(29, 'days').format('MM/DD/YYYY') + ' - ' + moment().format('MM/DD/YYYY'));
         $('#datepicker-container').hide();
+
+        $("#dateInput").val(moment().subtract(29, 'days').format('MM/DD/YYYY') + ' - ' + moment().format('MM/DD/YYYY'));
+        console.log($("#dateForm"))
+            // $("#dateForm").submit();
+
+        $('dateForm').submit(function(e) {
+            console.log('object here...')
+                // Stop the form submitting
+            e.preventDefault();
+            e.currentTarget.submit();
+            console.log('object here')
+        });
     });
 
     // process when click custom button1
@@ -355,7 +356,7 @@
 
     // process when click custom button3
     $(document).on("click", "#custom3", function() {
-        console.log('custom button3 is clicked')
+        $('#datepicker-container').show();
     });
 
     !(function() {
