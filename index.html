@@ -17,11 +17,14 @@
     <script src="https://kit.fontawesome.com/7fcef2ffd5.js" crossorigin="anonymous"></script>
     <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <title>Policy Builder</title>
 </head>
 
 <body>
 
+    <!-- Date: <input type="text" id="my_date_picker"> -->
     <div class="datepicker-container" id="datepicker-container">
         <div class="ditepicker-card">
             <div class="input-group-append" data-target="#reservation" data-toggle="datetimepicker">
@@ -29,9 +32,10 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
             </div>
-            <div name="reservation" id="reservation" class="datepicker-label">select date</div>
+            <input type="text" class="datepicker-label" id="reservation" style="width:100%;" value="Select Date" />
         </div>
     </div>
+
     <div class="bg">
         <!-- login page -->
         <section class="login-page">
@@ -297,47 +301,37 @@
 
 </body>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.css" integrity="sha512-gp+RQIipEa1X7Sq1vYXnuOW96C4704yI1n0YB9T/KqdvqaEgL6nAuTSrKufUX3VBONq/TPuKiXGLVgBKicZ0KA==" crossorigin="anonymous"
-/>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
-
 <script>
     // show/hide date-picker at loading screen
     $('#datepicker-container').hide();
-    $(function() {
-        $('#reservation').datetimepicker();
-    });
+
+    $(document).ready(function() {
+
+        $(function() {
+            $("#reservation").datepicker();
+        });
+
+        $('#reservation').change(function() {
+            startDate = $(this).datepicker('getDate');
+            startDate = (moment(startDate).format('MM/DD/YYYY'));
+
+            $(".rw-new-message").val(startDate);
+            $('#datepicker-container').hide();
+            $("#reservation").val('Select Date');
+
+
+            $("#dateInput").val(startDate);
+
+            $('.rw-send').prop('disabled', false);
+            document.querySelector('.rw-send').click();
+        })
+    })
 
 
     // hide date-picker
     function hideDatepicker() {
         $('#datepicker-container').hide();
     }
-
-    // pick date-picker and set the value to the chatbot text
-    $('#reservation').daterangepicker(null, function(start, end, label) {
-        $(".rw-new-message").val(moment().subtract(29, 'days').format('MM/DD/YYYY') + ' - ' + moment().format('MM/DD/YYYY'));
-        $('#datepicker-container').hide();
-
-        $("#dateInput").val(moment().subtract(29, 'days').format('MM/DD/YYYY') + ' - ' + moment().format('MM/DD/YYYY'));
-        console.log($("#dateForm"))
-            // $("#dateForm").submit();
-
-        // $('dateForm').submit(function(e) {
-        //     console.log('object here...')
-        //         // Stop the form submitting
-        //     e.preventDefault();
-        //     e.currentTarget.submit();
-        //     console.log('object here')
-        // });
-    });
 
     // process when click custom button1
     $(document).on("click", "#custom1", function() {

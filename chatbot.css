@@ -267,8 +267,15 @@
     justify-content: flex-end;
 }
 
+.close {
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+}
+
 .close span {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .datepicker-label {
